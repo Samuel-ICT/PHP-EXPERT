@@ -30,7 +30,7 @@ $medewerkers = [
   
   /*  De medewerkers-array heeft nu meerdere arrays. */
 
-  for ($x=0; $x <4 ; $x++) { 
+  for ($x=0; $x <5 ; $x++) { 
     echo $medewerkers[$x]['voornaam']." ". $medewerkers[$x] ['achternaam']. " is een " .$medewerkers[$x] ['functie']. "<br>";
   }
   
