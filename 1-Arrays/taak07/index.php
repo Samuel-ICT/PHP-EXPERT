@@ -79,15 +79,21 @@
     <!-- Pas de code hieronder aan  -->
     <!-- Loop door de array $nieuwsberichten en toon de gegevens in de juist HTML-tags  -->
 
+    <?php
+    foreach ($nieuwsberichten as $titels => $nieuwsbericht) {
+        echo '<h1>'.$titels. '</h1>';
+        foreach ($nieuwsbericht as $value) {
+            echo '<div class="content">';
+            echo '<h2 class="title">'.$value['titel'].'</h2>';
+            echo '<p class="title">'.$value['beschrijving'] .'</p>';
+            echo '<img src='.$value['image'].' class="title">';
 
-    <h1></h1>
-    <div class="content">
-
-        <h2 class="title"></h2>
-        <p class="title"></p>
-        <img src="" class="title">
-
-    </div>
+            echo '</div>';
+        }
+    }
+    ?>
+    
+    
 
 
 </body>
