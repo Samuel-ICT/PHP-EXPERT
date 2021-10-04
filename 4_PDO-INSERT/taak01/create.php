@@ -20,16 +20,17 @@
 
     $database_connectie = new PDO("mysql:host=$database_lokatie;dbname=$database_naam",$database_gebruiker,$database_wachtwoord);
 
-    $voornaam = $_POST['voornaam'];
-    $achternaam = $_POST['achternaam'];
+    if(isset($_POST['voornaam'])&& isset($_POST['achternaam'])){
+      $voornaam = $_POST['voornaam'];
+      $achternaam = $_POST['achternaam'];
+      echo "";
+    }
     $sql = 'INSERT INTO users (firstname, lastname) VALUES (:ph_voornaam, :ph_achternaam)';
 
     $statement = $database_connectie->prepare($sql);
     $statement -> bindParam(':ph_voornaam', $voornaam);
     $statement -> bindParam(':ph_achternaam', $achternaam);
     $statement->execute();
-    $naam = $statement->fetch();
-
     ?>
 
   </form> 
