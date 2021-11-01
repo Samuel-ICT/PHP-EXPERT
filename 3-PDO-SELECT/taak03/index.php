@@ -6,9 +6,9 @@ $database_wachtwoord = '';
 
 $database_connectie = new PDO("mysql:host=$database_lokatie;dbname=$database_naam", $database_gebruiker, $database_wachtwoord);
 
-$firstname = 'Mohamed';
+$firstname = 'Mohammed';
 $lastname = "Hadid";
-$sql = 'SELECT * FROM users WHERE firstname= :firstname AND lastname = :lastname';
+$sql = 'SELECT * FROM users WHERE firstname = :firstname AND lastname = :lastname';
 $statement = $database_connectie->prepare($sql);
 $statement->bindParam(':firstname', $firstname);
 $statement->bindParam(':lastname', $lastname);
